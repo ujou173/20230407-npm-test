@@ -7,7 +7,7 @@ const html = {
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <META HTTP-EQUIV="refresh" CONTENT="1">
+      
       <title>Clock</title>
       <style>
         *{
@@ -22,6 +22,7 @@ const html = {
         <div>${data}</div>
       </div>
       <script src="/clockStyle.js"></script>
+      <script src="/reload.js"></script>
     </body>
     </html>`
   },
