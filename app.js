@@ -10,15 +10,22 @@ const server = http.createServer(function(request, response){
       const currentTime = moment(now).format('YYYY년 MM월 HH시 mm분 ss초 dddd');
       return currentTime;
     }
-    let a = timeFunc();
-    console.log(a);
+    let time = timeFunc();
+    console.log(time);
     response.statusCode = 200;
     response.setHeader("Content-Type", "text/html");
-    response.write(htmlBody.htmlFunc(a));
+    response.write(htmlBody.htmlFunc(time));
     response.end();
   }
   else if (request.url.split("/")[1] === "clockStyle.js") {
     fs.readFile(`./clockStyle.js`, function (err, data) {
+      response.writeHead(200);
+      response.write(data);
+      response.end();
+    });
+  }
+  else if (request.url.split("/")[1] === "reload.js") {
+    fs.readFile(`./reload.js`, function (err, data) {
       response.writeHead(200);
       response.write(data);
       response.end();
