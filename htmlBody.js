@@ -18,7 +18,9 @@ const html = {
       </style>
     </head>
     <body>
-      <div id='root'>${data}</div>
+      <div id='root'>
+        <div>${data}</div>
+      </div>
       <script src="/clockStyle.js"></script>
     </body>
     </html>`
