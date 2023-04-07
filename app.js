@@ -2,15 +2,6 @@ import http from 'http';
 import fs from 'fs';
 import htmlBody from './htmlBody.js';
 import moment from 'moment';
-import { time } from 'console';
-
-// function timeFunc() {
-//   const now = new Date();
-//   const currentTime = moment(now).format('YYYY년 MM월 HH시 mm분 ss초 dddd');
-//   return currentTime;
-// }
-// console.log(timeFunc());
-
 
 const server = http.createServer(function(request, response){
   if (request.url === "/") {
