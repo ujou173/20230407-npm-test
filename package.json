@@ -1,4 +1,7 @@
 {
+  "author": "",
+  "type": "module",
+  "license": "ISC",
   "dependencies": {
     "moment": "^2.29.4"
   }
