@@ -24,13 +24,6 @@ const server = http.createServer(function(request, response){
       response.end();
     });
   }
-  else if (request.url.split("/")[1] === "reload.js") {
-    fs.readFile(`./reload.js`, function (err, data) {
-      response.writeHead(200);
-      response.write(data);
-      response.end();
-    });
-  }
 });
 
 server.listen(3050, function(error) {
